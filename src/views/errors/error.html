@@ -1,2 +1,9 @@
 {% extends "hmpo-template.njk" %}
 {% set hmpoPageKey = "errors.error" %}
+
+{% block mainContent %}
+
+{{ error | dump }}
+{{ super() }}
+
+{% endblock %}}

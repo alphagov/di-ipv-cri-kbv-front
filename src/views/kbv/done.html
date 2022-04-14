@@ -1,2 +1,12 @@
-{% extends "form-template.njk" %}
+{% extends "hmpo-template.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
 {% set hmpoPageKey = "identityDone" %}
+
+{% block mainContent %}
+{{ super() }}
+
+<form action="/oauth2/authorize" method="POST">
+    {{ govukButton({ text: "Return" }) }}
+</form>
+{% endblock %}

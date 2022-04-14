@@ -7,12 +7,21 @@ module.exports = class PlaywrightDevPage {
   }
 
   async fillOutDetails() {
-    await this.page.check("#formType-dropDown");
+    // Home
     await this.page.click("button");
-    await this.page.click("button");
+
+    // List of Credential Issuers
+    await this.page.click("input");
+
+    // Search for Users
+    await this.page.fill("#name", "KENNETH DECERQUEIRA");
+    await this.page.locator("button >> nth=1").click();
+
+    // Select User
+    await this.page.locator(".govuk-table__cell a").click();
   }
 
   async goto() {
-    await this.page.goto("http://localhost:5020/details");
+    await this.page.goto("http://localhost:8085/");
   }
 };

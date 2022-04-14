@@ -16,8 +16,8 @@
       "requiredScenarioState": "Started",
       "newScenarioState": "FirstQuestion",
       "request": {
-        "method": "GET",
-        "url": "/authorize",
+        "method": "POST",
+        "urlPath": "/session",
         "headers": {
           "x-scenario-id": {
             "equalTo": "question-success"
@@ -27,7 +27,7 @@
       "response": {
         "status": 200,
         "jsonBody": {
-          "sessionId": "ABADCAFE"
+          "session-id": "ABADCAFE"
         }
       }
     },
@@ -38,7 +38,7 @@
         "method": "GET",
         "url": "/question",
         "headers": {
-          "sessionId": {
+          "session-id": {
             "equalTo": "ABADCAFE"
           },
           "x-scenario-id": {
@@ -74,7 +74,7 @@
         "method": "POST",
         "url": "/answer",
         "headers": {
-          "sessionId": {
+          "session-id": {
             "equalTo": "ABADCAFE"
           },
           "x-scenario-id": {
@@ -96,7 +96,7 @@
         "method": "GET",
         "url": "/question",
         "headers": {
-          "sessionId": {
+          "session-id": {
             "equalTo": "ABADCAFE"
           },
           "x-scenario-id": {
@@ -132,7 +132,7 @@
         "method": "POST",
         "url": "/answer",
         "headers": {
-          "sessionId": {
+          "session-id": {
             "equalTo": "ABADCAFE"
           },
           "x-scenario-id": {
@@ -155,12 +155,12 @@
     {
       "scenarioName": "question-success",
       "requiredScenarioState": "NoMoreQuestions",
-      "newScenarioState": "FinalQuestion",
+      "newScenarioState": "AuthorizationCode",
       "request": {
         "method": "GET",
         "url": "/question",
         "headers": {
-          "sessionId": {
+          "session-id": {
             "equalTo": "ABADCAFE"
           },
           "x-scenario-id": {
@@ -170,6 +170,45 @@
       },
       "response": {
         "status": 204
+      }
+    },
+    {
+      "scenarioName": "question-success",
+      "requiredScenarioState": "AuthorizationCode",
+      "newScenarioState": "FinalQuestion",
+      "request": {
+        "method": "GET",
+        "urlPath": "/authorization-code",
+        "queryParameters": {
+          "response_type": {
+            "matches": "code"
+          },
+          "client_id": {
+            "matches": "ipv-core-stub"
+          },
+          "state": {
+            "matches": "^(.*)$"
+          },
+          "redirect_uri": {
+            "matches": "^(.*)$"
+          }
+        },
+        "headers": {
+          "session-id": {
+            "equalTo": "ABADCAFE"
+          },
+          "x-scenario-id": {
+            "equalTo": "question-success"
+          }
+        }
+      },
+      "response": {
+        "status": 200,
+        "jsonBody": {
+          "code": {
+            "value": "FACEFEED"
+          }
+        }
       }
     }
   ]

@@ -2,3 +2,6 @@ index:
   title: di-ipv-cri-kbv-front
   content:
     - Sample page for credential issuer
+
+identityDone:
+  title: Verification complete

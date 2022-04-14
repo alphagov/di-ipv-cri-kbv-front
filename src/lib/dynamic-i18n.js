@@ -9,10 +9,10 @@ module.exports = {
     const overrideTranslations = {
       fields: {
         question: {
-          content: `${question.text} #question`,
-          legend: `${question.text} #legend`,
-          label: `${question.text} #label`,
-          hint: `${question.toolTip} #hint`,
+          content: `${question.text}`,
+          legend: `${question.questionID} - ${question.text}`,
+          label: `${question.text}`,
+          hint: `${question.tooltip}`,
           validation: {
             default: "You need to answer the question",
           },
@@ -20,7 +20,7 @@ module.exports = {
             const answerKey = answer;
 
             acc[answerKey] = {
-              label: `${_.capitalize(answer)} #answer`,
+              label: `${_.capitalize(answer)}`,
               value: answer,
             };
 
