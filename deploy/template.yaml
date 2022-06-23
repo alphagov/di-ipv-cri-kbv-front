@@ -35,6 +35,10 @@ Conditions:
     - !Equals [ !Ref Environment, staging ]
     - !Equals [ !Ref Environment, integration ]
     - !Equals [ !Ref Environment, production ]
+  IsProduction:
+    !Equals [ !Ref Environment, production ]
+  IsNotProduction:
+    !Not [!Equals [ !Condition IsProduction ]]
   UsePermissionsBoundary:
     Fn::Not:
       - Fn::Equals:
@@ -269,7 +273,10 @@ Resources:
         DeploymentCircuitBreaker:
           Enable: TRUE
           Rollback: TRUE
-      DesiredCount: 1
+      DesiredCount: !If
+        - IsProduction
+        - 2
+        - 1
       EnableECSManagedTags: false
       HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
