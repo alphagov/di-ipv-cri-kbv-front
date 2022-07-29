@@ -1,18 +1,18 @@
 surname:
   label: Surname
   validation:
-    default: 'You need to supply your surname'
+    default: You need to supply your surname
 
 givenNames:
   label: Given names
   validation:
-    default: 'You need to supply your given names'
+    default: You need to supply your given names
 
 dateOfBirth:
   legend: Date of birth
   validation:
-    default: 'You need to supply your date of birth'
-    before: 'Issue date must be in the past'
+    default: You need to supply your date of birth
+    before: Issue date must be in the past
 
 "date-day":
   label: Day
@@ -22,7 +22,6 @@ dateOfBirth:
 
 "date-year":
   label: Year
-
 
 houseNameNumber:
   label: House name or number
@@ -131,7 +130,7 @@ Q00058:
   hint: Think about the maximum amount you can spend on any of your credit cards. You can find this on your credit card statement.
 Q00060:
   legend: How much was your most recent credit card repayment?
-  hint: Look at the amount on your most recent credit card statement, even if you've made another payment since then. This will usually be in the account summary near the top of the statement."
+  hint: Look at the amount on your most recent credit card statement, even if you've made another payment since then. This will usually be in the account summary near the top of the statement.
 Q00061:
   legend: How much cash have you recently withdrawn with your credit card?
   hint: You can find this out by looking at the total amount of 'cash advances' on your most recent credit card statement.
@@ -169,3 +168,96 @@ Q00113:
   legend: How much of your student loan did you pay back last month?
   hint: You can find this on your payslip.
 
+Q00003:
+  legend: What were the house number and the first 4 letters of the street name from your previous address?
+  hint: The first 4 letters of the street name should not include any numbers, spaces or special characters.
+Q00004:
+  legend: What were the house number and postcode from your previous address?
+  hint:
+Q00005:
+  legend: What were the first 4 letters of the house name and the postcode from your previous address?
+  hint: The first 4 letters of your house name should not include any numbers, spaces or special characters.
+Q00006:
+  legend: What were the first 4 letters of the house name and the first 4 letters of the street name from your previous address?
+  hint: The first 4 letters of your house name and street name should not include any numbers, spaces or special characters.
+Q00007:
+  legend: How long did you live at your previous address for?
+  hint:
+Q00009:
+  legend: Which lender did you borrow your mortgage from?
+  hint:
+Q00010:
+  legend: Which lender have you borrowed one of your mortgages from?
+  hint: Think about any mortgages you've taken out over the last 3 years.
+Q00011:
+  legend: When did you take out your mortgage?
+  hint:
+Q00012:
+  legend: When did you take out your mortgage?
+  hint:
+Q00013:
+  legend: When did you take out one of your mortgages?
+  hint: Think about any mortgages you've taken out over the last 3 years.
+Q00014:
+  legend: When did you take out one of your mortgages?
+  hint: Think about any mortgages you've taken out over the last 3 years.
+Q00019:
+  legend: What are the first 2 letters of the first name of the other person on your mortgage?
+  hint: For example, choose 'JE' if the other person's name is Jerry Davis.
+Q00020:
+  legend: When was the other person on your mortgage born?
+  hint:
+Q00021:
+  legend: Which lender did you borrow your buy-to-let mortgage from?
+  hint:
+Q00022:
+  legend: Which lender did you borrow one of your buy-to-let mortgages from?
+  hint: Think about any buy-to-let mortgages you've taken out over the last 3 years.
+Q00023:
+  legend: When did you take out your buy-to-let mortgage?
+  hint:
+Q00024:
+  legend: When did you take out your buy-to-let mortgage?
+  hint:
+Q00025:
+  legend: When did you take out one of your buy-to-let mortgages?
+  hint: Think about any buy-to-let mortgages you've taken out over the last 3 years.
+Q00026:
+  legend: When did you take out one of your buy-to-let mortgages?
+  hint: Think about any buy-to-let mortgages you've taken out over the last 3 years.
+Q00033:
+  legend: Which provider did you take out a loan with?
+  hint: Think about a personal loan you've taken out but not paid back yet. This does not include hire purchase agreements, second mortgages, home credit loans or student loans.
+Q00034:
+  legend: Which of these providers did you take out a loan with?
+  hint: Think about any personal loans you've taken out but not paid back yet. These does not include hire purchase agreements, second mortgages, home credit loans or student loans.
+Q00043:
+  legend: How long do you have to pay back your loan?
+  hint: This is also known as your 'loan term'. You can find this on your loan statement. It might also show up in your banking app.
+Q00044:
+  legend: What are the first 2 letters of the first name of the person that took out a loan with you?
+  hint: For example, choose 'RU' if the other person's name is Ruby Evans.
+Q00048:
+  legend: Who have you opened a current account with?
+  hint: Think about your current account instead of any joint, business or savings accounts you might have.
+Q00049:
+  legend: Who have you opened a current account with?
+  hint: Think about your current account instead of any joint, business or savings accounts you might have.
+Q00052:
+  legend: What are the last 5 numbers of your current account number?
+  hint: You can find this number on your bank statement. It might also show up on your bank card or in your banking app.
+Q00055:
+  legend: Who is your credit card provider?
+  hint:
+Q00056:
+  legend: Who is one of your credit card providers?
+  hint: Think about who issued any of the credit cards you have.
+Q00067:
+  legend: Who do you have a mobile phone contract with?
+  hint: Think about your personal phone contract instead of your work phone, if you have one.
+Q00069:
+  legend: Who do you have a phone contract with?
+  hint: Think about your personal mobile or landline contracts instead of your work phone, if you have one.
+Q00083:
+  legend: What are the first 2 letters of the trading name of your company?
+  hint: Think about the trading name of the company you are, or have been, the director of.
